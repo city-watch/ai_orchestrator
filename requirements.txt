@@ -1,0 +1,8 @@
+# --- Core Framework ---
+fastapi[standard]
+
+# --- Server ---
+uvicorn
+
+# --- Data Validation ---
+pydantic

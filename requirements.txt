@@ -6,3 +6,6 @@ uvicorn
 
 # --- Data Validation ---
 pydantic
+python-dotenv
+
+google-cloud-vision

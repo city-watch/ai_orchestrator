@@ -55,10 +55,26 @@ This service requires Google Cloud credentials to be configured in your local en
 With your virtual environment activated and your `.env` file created, use Uvicorn to run the FastAPI application:
 
 ```bash
-uvicorn main:app --reload
+poetry run fastapi run main.py --port {port number}
 ```
 
-The application will be available at `http://127.0.0.1:8000`. You can access the interactive API documentation at `http://127.0.0.1:8000/docs`.
+The application if provided no port will be available at `http://127.0.0.1:8000`. You can access the interactive API documentation at `http://127.0.0.1:8000/docs`.
+
+### Running Tests
+
+To run the unit tests for the service:
+
+1.  **Activate Virtual Environment**:
+    ```bash
+    source .venv/bin/activate
+    ```
+    (Ensure your virtual environment is activated if not already.)
+
+2.  **Run Pytest**:
+    ```bash
+    pytest
+    ```
+    This will execute all tests in the `tests/` directory.
 
 ## API Endpoints
 

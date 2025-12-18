@@ -3,7 +3,12 @@ from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from google.cloud import vision # pip install google-cloud-vision
 from dotenv import load_dotenv
+import logging
+
 load_dotenv()
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 from models import (
     AssessPriorityRequest, 
@@ -118,8 +123,10 @@ async def categorize_issue_image(file: UploadFile = File(...)):
         
         return CategorizeResponse(category=category, confidence=confidence)
 
+    except HTTPException as e:
+        raise e
     except Exception as e:
-        print(f"❌ AI Error: {e}")
+        logging.error(f"AI Error: {e}")
         return CategorizeResponse(category="Uncategorized", confidence=0.0)
 
 

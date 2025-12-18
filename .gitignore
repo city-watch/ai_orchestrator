@@ -1,5 +1,7 @@
 .env
-.json
-/__pycache__
-.venv/
 *.json
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc

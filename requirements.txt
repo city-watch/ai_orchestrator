@@ -9,3 +9,6 @@ pydantic
 python-dotenv
 
 google-cloud-vision
+
+pytest
+httpx

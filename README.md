@@ -64,17 +64,13 @@ The application if provided no port will be available at `http://127.0.0.1:8000`
 
 To run the unit tests for the service:
 
-1.  **Install Development Dependencies**:
-    ```bash
-    pip install -r requirements-dev.txt
-    ```
-2.  **Activate Virtual Environment**:
+1.  **Activate Virtual Environment**:
     ```bash
     source .venv/bin/activate
     ```
     (Ensure your virtual environment is activated if not already.)
 
-3.  **Run Pytest**:
+2.  **Run Pytest**:
     ```bash
     pytest
     ```
